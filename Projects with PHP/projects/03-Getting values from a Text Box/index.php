@@ -1,36 +1,34 @@
 <?php include 'header.php';?>
 
-<?php 
 
-if(isset($_POST['coder'])){
-    $coder = $_POST['coder'];
-    echo 'You have selected: ';
-    foreach ($coder as $lan => $value) {
-        echo $value.",";
-    }
+<?php
+
+if(isset($_POST['username'])){
+    $name = $_POST['username'];
+    echo "Username is : " .$name;
 }
 
-?>
+?> 
 
-<form action="" method="POST" name="myform" id="myform">
+
+
+<form action="" method="post" name="myform" id="myform">
     <table>
         <tr>
-            <td>Gender:</td>
-            <td>
-                <input type="checkbox" name="coder[]" value="PHP">PHP
-                <input type="checkbox" name="coder[]" value="JAVA">JAVA
-                <input type="checkbox" name="coder[]" value="C#">C#
-            </td>
+            <td>Username :</td>
+            <td><input type="text" name="Username" required="1"></td>
         </tr>
         <tr>
             <td></td>
             <td>
-                <input type="submit" name="submit" value="submit">
-                <input type="reset" value="clear">
-            </td>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </td>    
         </tr>
     </table>
 </form>
+
+
 
 
 
